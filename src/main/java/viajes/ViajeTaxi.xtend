@@ -138,15 +138,11 @@ class ViajeTaxi implements Viaje{
 		taxi.estadoAuto = EstadoAutoEnums.LIBRE
 	}
 	
-	override confirmarPagoViajeConEjectivo() {
+	override confirmarPagoViajeConEfectivo() {
 			estado = EstadoViajeEnums.PAGADO
 			
-			usuario.viaje = null
-			taxi.viaje = null
-			
-			taxi.estadoAuto = EstadoAutoEnums.LIBRE
-			
-			taxi.enviarMensaje(usuario.numeroDeCelular, "viaje pagado en efectivo")
+			usuario.confirmarPagoYLiberarUsuario
+			taxi.confirmarPagoYLiberarAuto			
 	}
 	
 	override confirmarPagoViajeConTargeta() {

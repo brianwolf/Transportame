@@ -93,9 +93,14 @@ class Taxi extends Auto {
 		viaje = null
 	}
 	
+	def void confirmarPagoYLiberarAuto(){
+		viaje = null			
+		estadoAuto = EstadoAutoEnums.LIBRE	
+		notificador.enviarMensaje(numeroDeCelular, notificador.viajePagado)	
+	}
+	
 	def void confirmarPagoViajeConEfectivo(){
-		
-		if(viaje.estado == EstadoViajeEnums.FINALIZADO)	viaje.confirmarPagoViajeConEjectivo;
+		if(viaje.estado == EstadoViajeEnums.FINALIZADO)	viaje.confirmarPagoViajeConEfectivo
 	}
 	
 	def void confirmarPagoViajeTaxi(){

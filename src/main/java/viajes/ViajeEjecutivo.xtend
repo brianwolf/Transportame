@@ -155,7 +155,7 @@ class ViajeEjecutivo implements Viaje{
 		agencia.enviarMensaje(usuario.numeroDeCelular, "viaje cancelado")
 	}
 	
-	override confirmarPagoViajeConEjectivo() {
+	override confirmarPagoViajeConEfectivo() {
 		estado = EstadoViajeEnums.PAGADO
 		
 		usuario.viaje = null

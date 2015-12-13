@@ -102,7 +102,7 @@ class Agencia extends Auto{
 	}
 	
 	def void confirmarPagoViajeConEjectivo(ViajeEjecutivo viaje){
-		if(viaje.estado == EstadoViajeEnums.FINALIZADO)	viaje.confirmarPagoViajeConEjectivo;
+		if(viaje.estado == EstadoViajeEnums.FINALIZADO)	viaje.confirmarPagoViajeConEfectivo;
 	}
 	
 	def void enviarMensaje(String numero, String mensaje) {

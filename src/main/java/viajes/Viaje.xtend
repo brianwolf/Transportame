@@ -26,7 +26,7 @@ interface Viaje {
 	def void rechazarViaje()
 	def void finalizarViaje()
 	def void cancelarViaje()
-	def void confirmarPagoViajeConEjectivo()
+	def void confirmarPagoViajeConEfectivo()
 	def void confirmarPagoViajeConTargeta()
 	
 	def String numeroDeCelularDelAuto()

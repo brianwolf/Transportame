@@ -87,6 +87,11 @@ class Usuario {
 		notificador.enviarMensaje(numero, mensaje)
 	}
 	
+	def void confirmarPagoYLiberarUsuario(){
+		enviarMensaje(numeroDeCelular, notificador.viajePagado)
+		viaje = null
+	}
+	
 }
 
 
