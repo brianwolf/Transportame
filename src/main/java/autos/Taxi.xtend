@@ -46,10 +46,13 @@ class Taxi extends Auto {
 		return (estadoAuto == EstadoAutoEnums.LIBRE)
 	}
 	
-	def void pedirAceptarViaje(ViajeTaxi viajeNuevo){		
+	def void pedirAceptarViaje(ViajeTaxi viajeNuevo){
 		viajeEnEspera = viajeNuevo
 
-		if(!estasLibre)	rechazarViaje;
+		if(!estasLibre)	{
+			rechazarViaje
+			return
+		}
 		
 		notificador.enviarMensaje(numeroDeCelular, notificador.queresAceptarViaje)
 	}
@@ -75,7 +78,7 @@ class Taxi extends Auto {
 	def void finalizarTaxi(){
 		estadoAuto = EstadoAutoEnums.LIBRE
 				
-		enviarMensaje(numeroDeCelular, "Viaje finalizado")
+		enviarMensaje(numeroDeCelular, notificador.viajeFinalizado)
 	}
 	
 	def void finalizarViaje(){

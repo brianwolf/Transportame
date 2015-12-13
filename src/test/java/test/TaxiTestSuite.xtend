@@ -95,7 +95,7 @@ class TaxiTestSuite {
 	}
 
 	@Test
-	def void testTaxi2RechazaUnViajeYSeLeNotificaATaxi1(){
+	def void testTaxi2RechazaUnViajeYSeLeNotificaATaxi1QueAcepta(){
 		
 		nicolas.notificador = notificadorMockeado
 		taxi2.notificador = notificadorMockeado
