@@ -107,8 +107,7 @@ class TaxiTestSuite {
 		
 		taxi1.aceptarViaje		
 	
-		notificadorMockeado.verify(2.times).enviarMensaje(taxi1.numeroDeCelular, notificadorMockeado.queresAceptarViaje)
-		notificadorMockeado.verify(2.times).enviarMensaje(taxi2.numeroDeCelular, notificadorMockeado.queresAceptarViaje)
+		notificadorMockeado.verify(2.times).enviarMensaje("", notificadorMockeado.queresAceptarViaje)
 		notificadorMockeado.verify(1.times).enviarMensaje(nicolas.numeroDeCelular, notificadorMockeado.aceptarViaje)
 		
 		Assert.assertTrue(
@@ -131,8 +130,7 @@ class TaxiTestSuite {
 		taxi2.rechazarViaje
 		taxi1.rechazarViaje
 		
-		notificadorMockeado.verify(2.times).enviarMensaje(taxi1.numeroDeCelular, notificadorMockeado.queresAceptarViaje)
-		notificadorMockeado.verify(2.times).enviarMensaje(taxi2.numeroDeCelular,notificadorMockeado.queresAceptarViaje)
+		notificadorMockeado.verify(2.times).enviarMensaje("", notificadorMockeado.queresAceptarViaje)
 		notificadorMockeado.verify(1.times).enviarMensaje(nicolas.numeroDeCelular,notificadorMockeado.rechazarViaje)
 		
 		Assert.assertTrue(
